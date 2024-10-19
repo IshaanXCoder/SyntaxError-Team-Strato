@@ -1,0 +1,93 @@
+.inputSection{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(30,30,30);
+    width: 100vw;
+    height: 8vh;
+    align-items: center;
+}
+
+.inputSection .inpBox{
+    height: 6.5vh;
+    background-color: rgb(70,70,70);
+    border:none;
+    outline: none;
+    color: white;
+    text-align: left;
+    border-radius: 35px;
+    width: 70vw;
+    padding:1rem 2rem;
+    font-size: 15px;
+}
+
+.upArrow{
+    cursor: pointer;
+    margin-left: -120px;
+    background-color: white;
+    border: none;
+    outline: none;
+    padding:5px 5px;
+    border-radius: 50%;
+}
+
+.userPrompt{
+    width: 25vw;
+    /* height: 300px; */
+    height: auto;
+    padding: 20px 40px;
+    position: fixed;
+    color: white;
+    text-align: left;
+    background-color: rgb(70,70,70);
+    left: 0;
+    top: 50%;
+    border-radius: 35px;
+}
+
+.logo{
+    height: 60px;
+    width: 60px;
+    position: fixed;
+    right: 5%;
+    top:60%;
+    background-color: rgb(70,70,70);
+    padding: 5px 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.logo img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.uperContent{
+    background-color: rgb(10,10,10);
+    width: 100vw;
+    height: calc(100vh - 8vh);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clip{
+    clip-path: circle(3% at 93% 0%);
+    margin-top: 64vh;
+    
+}
+
+.chatContainer{
+    margin-top: 64vh;
+    transition: 1s all ease;
+    /* clip-path: circle(75%); */
+}
+
