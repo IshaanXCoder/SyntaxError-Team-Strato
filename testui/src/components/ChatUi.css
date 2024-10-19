@@ -34,17 +34,17 @@
 }
 
 .userPrompt{
-    width: 25vw;
-    /* height: 300px; */
-    height: auto;
-    padding: 20px 40px;
-    position: fixed;
+    /* position: absolute; */
     color: white;
     text-align: left;
-    background-color: rgb(70,70,70);
-    left: 0;
-    top: 50%;
-    border-radius: 35px;
+    /* transform: translateX(-50%); */
+    /* left: 50%; */
+    width: 60vw;
+    height: 40vh;
+    /* background-color: red; */
+    position: absolute;
+    margin-top: 3rem;
+    overflow-x: visible;
 }
 
 .logo{
@@ -70,13 +70,17 @@
 .uperContent{
     background-color: rgb(10,10,10);
     width: 100vw;
-    height: calc(100vh - 8vh);
+    min-height: calc(100vh - 8vh);
+    height: auto;
     position: fixed;
     top: 0;
     left: 0;
     display: flex;
     justify-content: center;
+    overflow-x: visible;
     align-items: center;
+    /* z-index: 2; */
+    
 }
 
 .clip{
@@ -88,6 +92,52 @@
 .chatContainer{
     margin-top: 64vh;
     transition: 1s all ease;
+
     /* clip-path: circle(75%); */
 }
 
+.response{
+    /* position: absolute; */
+    color: white;
+    text-align: left;
+    /* transform: translateX(-50%); */
+    /* left: 50%; */
+    width: 60vw;
+    overflow: scroll;
+    height: 40vh;
+    /* background-color: red; */
+    margin-top: 23rem;
+}
+
+.response p{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 35px;
+}
+
+
+.loader{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap :10px;
+}
+
+.loader hr{
+    border-radius: 4px;
+    border: none;
+    background-color: rgb(30,30,30);
+    background: linear-gradient(to right,rgb(20,20,20),white,rgb(20,20,20));
+    background-size: 800px 50px;
+    height: 20px;
+    animation: bar 1s linear infinite;
+}
+
+@keyframes bar {
+    0% {
+      background-position: 0% 0%;
+    }
+    100% {
+      background-position: 300% 0%;
+    }
+  }
