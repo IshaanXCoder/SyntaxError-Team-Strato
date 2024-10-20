@@ -22,6 +22,9 @@ namespace Scripts.Nodes.Binary
 
         public override void Connect()
         {
+            if (isConnected)
+                return;
+            
             if (branch == null)
                 isConnected = false;
             else

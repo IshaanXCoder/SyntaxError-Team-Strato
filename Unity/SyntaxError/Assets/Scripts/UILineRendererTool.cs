@@ -25,7 +25,7 @@ namespace Scripts
 
         public void PushVector(Vector2 direction)
         {
-            end = direction;
+            end = rect.InverseTransformVector(direction);
         }
         
         protected override void OnPopulateMesh(VertexHelper helper)

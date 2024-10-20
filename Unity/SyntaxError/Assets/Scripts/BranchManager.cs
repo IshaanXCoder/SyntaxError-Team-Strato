@@ -35,7 +35,7 @@ namespace Scripts
         
         public void CreatePrefab(string name)
         {
-            var data = new PrefabData(name, ForceResult(1, 1), ForceResult(1, 0), ForceResult(0, 1), ForceResult(0, 0));
+            var data = new PrefabData(name, ForceResult(1, 1), ForceResult(0, 1), ForceResult(1, 0), ForceResult(0, 0));
 
             DeleteAll();
             CircuitManager.Instance.CreateCustom(data);

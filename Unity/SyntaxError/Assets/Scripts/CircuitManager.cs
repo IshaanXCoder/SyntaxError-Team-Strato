@@ -20,6 +20,10 @@ public sealed class CircuitManager : SingletonPattern<CircuitManager>
     
     [SerializeField] private Transform instanceParent;
     [SerializeField] private EditorUtilities utilities;
+
+    [SerializeField] private List<PrefabData> prefabDatas;
+    [SerializeField] private PrefabButton prefabButton;
+    [SerializeField] private Transform prefabButtonParent;
     
     void Start()
     {
@@ -40,6 +44,16 @@ public sealed class CircuitManager : SingletonPattern<CircuitManager>
     {
         var instance = Instantiate(prefab, instanceParent);
         instance.Initialise(data);
+        
+        prefabDatas.Add(data);
+        var button = Instantiate(prefabButton, prefabButtonParent);
+        button.Initialise(prefabDatas.Count - 1, data.Name);
+    }
+    
+    public void CreateCustom(int index)
+    {
+        var instance = Instantiate(prefab, instanceParent);
+        instance.Initialise(prefabDatas[index]);
     }
     
     public void CreateProgrammable(int inCount, int outCount, string code, string name)

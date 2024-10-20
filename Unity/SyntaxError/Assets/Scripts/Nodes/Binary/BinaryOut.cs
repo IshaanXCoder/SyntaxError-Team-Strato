@@ -12,9 +12,6 @@ namespace Scripts.Nodes.Binary
                 branch.SetState();
         }
 
-        public override void Connect()
-        {  }
-
         public override void Connect(bool value)
         {
             isConnected = value;
